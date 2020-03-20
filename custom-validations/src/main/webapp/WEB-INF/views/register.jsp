@@ -1,0 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Register</title>
+		<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+		<script src="<c:url value="/resources/js/jquery-1.11.1.min.js" />"></script>
+		<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-md-offset-2 col-md-7">
+				<h2 class="text-center">Spring MVC 5 Form Handling Example - Sign up Form</h2>
+				<div class="panel panel-info">
+					<div class="panel-heading">
+					<div class="panel-title">Sign Up</div>
+					</div>
+					<div class="panel-body">
+						<form:errors  path="user"  cssClass="alert alert-danger"/><br><br>
+						<form:form action="showResult" cssClass="form-horizontal" method="post" modelAttribute="user">
+							<div class="form-group">
+								<label for="icode" class="col-md-3 control-label">User Name </label>
+								<div class="col-md-9">
+									<form:input path="userName" cssClass="form-control" /><br>
+									<form:errors path="userName" cssClass="alert alert-danger"/> <br><br>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="email" class="col-md-3 control-label">Email</label>
+								<div class="col-md-9">
+									<form:input path="email" cssClass="form-control" /><br>
+									<form:errors path="email" cssClass="alert alert-danger"/> <br><br>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="password" class="col-md-3 control-label">Password</label>
+								<div class="col-md-9">
+									<form:password path="password" cssClass="form-control" /> <br>
+									<form:errors path="password" cssClass="alert alert-danger"/> <br><br>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="confirmPassword" class="col-md-3 control-label">Confirm Password</label>
+								<div class="col-md-9">
+									<form:password path="confirmPassword" cssClass="form-control" /><br>
+									<form:errors path="confirmPassword" cssClass="alert alert-danger"/> <br><br>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<!-- Button -->
+								<div class="col-md-offset-3 col-md-9">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</form:form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
