@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+.AddTagLink
+{
+	text-align: right;
+    margin-bottom: 10px;
+}
+td, th {
+	text-align: center;
+}
